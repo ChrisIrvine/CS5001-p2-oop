@@ -3,8 +3,13 @@
  */
 public class BasicGrid extends AbstractGrid {
 
-    public BasicGrid(int height, int width) {
-
+    public BasicGrid(int width, int height) {
+        grid = new AbstractItem[width][height];
+        for(int w = 0; w < width; w++) {
+            for(int h = 0; h < height; h++) {
+                grid[w][h] = new EmptyItem();
+            }
+        }
     }
     /**
      *
@@ -77,7 +82,7 @@ public class BasicGrid extends AbstractGrid {
 
     @Override
     public int getTotalProduction() {
-
+        return 1;
     }
 
     @Override
