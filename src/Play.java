@@ -6,7 +6,7 @@ public class Play {
     protected int consumption;
 
     public void main(String[] args) {
-        BasicGrid bg = new BasicGrid(3, 5);
+        Grid bg = new Grid(3, 5);
 
     }
 }

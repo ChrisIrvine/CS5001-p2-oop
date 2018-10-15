@@ -1,8 +1,8 @@
 import static org.junit.Assert.*;
 
-public class BasicGridTest {
-    BasicGrid grid = new BasicGrid(3, 5);
-    Farmer tim = new Farmer(Farmer.FarmerType.CornFarmer);
+public class GridTest {
+    Grid grid = new Grid(3, 5);
+    CornFarmer tim = new CornFarmer(grid, 1, 1);
 
     @org.junit.Test
     public void getWidth() {

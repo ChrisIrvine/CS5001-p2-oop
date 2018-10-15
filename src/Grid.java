@@ -1,9 +1,9 @@
 /**
  *
  */
-public class BasicGrid extends AbstractGrid {
+public class Grid extends AbstractGrid {
 
-    public BasicGrid(int width, int height) {
+    public Grid(int width, int height) {
         grid = new AbstractItem[width][height];
         for(int w = 0; w < width; w++) {
             for(int h = 0; h < height; h++) {
