@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d1e9437-980b-41fc-aa00-3f7bde6472ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/RadishFarmer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/RadishFarmerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Beaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rabbit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/BeaverTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/RabbitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/BasicGrid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Farmer$FarmerType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Farmer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Play.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Play.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Produce$ProduceType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Produce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/BasicGridTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/FarmerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/ProduceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Farmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CornFarmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Play.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produce.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/BasicGridTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GridTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/FarmerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CornFarmerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ProduceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CornFarmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CornFarmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadishFarmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadishFarmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CornFarmerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CornFarmerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RadishFarmerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RadishFarmerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,36 +38,37 @@
     <session id="1017237333">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
           <entry key="groovy" value="2" />
-          <entry key="java" value="44" />
+          <entry key="java" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="36" />
+          <entry key="JAVA" value="57" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8905" />
+          <entry key="java" value="11118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8827" />
+          <entry key="JAVA" value="11040" />
           <entry key="PLAIN_TEXT" value="78" />
         </counts>
       </usages-collector>
@@ -86,11 +78,26 @@
     <splitter split-orientation="vertical" split-proportion="0.49325085">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Beaver.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#476#477#0" expanded="true" />
+                    <element signature="e#510#511#0" expanded="true" />
+                    <element signature="e#560#561#0" expanded="true" />
+                    <element signature="e#593#594#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/CornFarmer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-357">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -98,24 +105,39 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/RadishFarmer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+                <state relative-caret-position="135">
+                  <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Rabbit.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
                   <folding>
-                    <element signature="e#395#396#0" expanded="true" />
-                    <element signature="e#428#429#0" expanded="true" />
-                    <element signature="e#460#461#0" expanded="true" />
-                    <element signature="e#494#495#0" expanded="true" />
-                    <element signature="e#556#557#0" expanded="true" />
-                    <element signature="e#595#596#0" expanded="true" />
-                    <element signature="e#827#828#0" expanded="true" />
-                    <element signature="e#867#868#0" expanded="true" />
-                    <element signature="e#906#907#0" expanded="true" />
-                    <element signature="e#947#948#0" expanded="true" />
-                    <element signature="e#981#982#0" expanded="true" />
-                    <element signature="e#1019#1020#0" expanded="true" />
-                    <element signature="e#1064#1065#0" expanded="true" />
-                    <element signature="e#1108#1109#0" expanded="true" />
+                    <element signature="e#777#778#0" expanded="true" />
+                    <element signature="e#810#811#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Grid.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="547">
+                  <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/AbstractGrid.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" column="35" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -125,42 +147,28 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/CornFarmerTest.java">
+            <entry file="file://$PROJECT_DIR$/tests/GridTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#422#423#0" expanded="true" />
-                    <element signature="e#452#453#0" expanded="true" />
-                    <element signature="e#652#653#0" expanded="true" />
-                    <element signature="e#700#701#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/RadishFarmerTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#376#377#0" expanded="true" />
-                    <element signature="e#431#432#0" expanded="true" />
-                    <element signature="e#517#518#0" expanded="true" />
-                    <element signature="e#547#548#0" expanded="true" />
-                    <element signature="e#606#607#0" expanded="true" />
-                    <element signature="e#654#655#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="435">
+                  <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/GridTest.java">
+            <entry file="file://$PROJECT_DIR$/tests/RabbitTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="9" selection-start-column="9" selection-end-column="9" />
+                <state relative-caret-position="465">
+                  <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/BeaverTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -202,12 +210,16 @@
         <option value="$PROJECT_DIR$/tests/FarmerTest.java" />
         <option value="$PROJECT_DIR$/src/Farmer.java" />
         <option value="$PROJECT_DIR$/src/BasicGrid.java" />
-        <option value="$PROJECT_DIR$/src/Grid.java" />
         <option value="$PROJECT_DIR$/tests/GridTest.java" />
-        <option value="$PROJECT_DIR$/tests/CornFarmerTest.java" />
-        <option value="$PROJECT_DIR$/src/CornFarmer.java" />
+        <option value="$PROJECT_DIR$/src/Grid.java" />
+        <option value="$PROJECT_DIR$/tests/BeaverTest.java" />
+        <option value="$PROJECT_DIR$/src/Beaver.java" />
         <option value="$PROJECT_DIR$/src/RadishFarmer.java" />
+        <option value="$PROJECT_DIR$/src/CornFarmer.java" />
         <option value="$PROJECT_DIR$/tests/RadishFarmerTest.java" />
+        <option value="$PROJECT_DIR$/tests/CornFarmerTest.java" />
+        <option value="$PROJECT_DIR$/tests/RabbitTest.java" />
+        <option value="$PROJECT_DIR$/src/Rabbit.java" />
       </list>
     </option>
   </component>
@@ -230,6 +242,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,16 +264,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539600302832" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539679910733" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -275,16 +287,16 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
       <recent name="groovy.util.GroovyTestCase" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$/src" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -299,23 +311,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CornFarmerTest">
+  <component name="RunManager" selected="JUnit.RabbitTest.reduceStock">
     <configuration name="CornFarmerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS5001-p2-oop" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CornFarmerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CornFarmerTest.isCorn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS5001-p2-oop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CornFarmerTest" />
-      <option name="METHOD_NAME" value="isCorn" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -330,10 +332,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProduceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RabbitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS5001-p2-oop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProduceTest" />
+      <option name="MAIN_CLASS_NAME" value="RabbitTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitTest.reduceStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS5001-p2-oop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RabbitTest" />
+      <option name="METHOD_NAME" value="reduceStock" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -348,18 +360,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.CornFarmerTest" />
-      <item itemvalue="JUnit.ProduceTest" />
       <item itemvalue="JUnit.CornFarmerTest.process" />
-      <item itemvalue="JUnit.CornFarmerTest.isCorn" />
       <item itemvalue="JUnit.RadishFarmerTest" />
+      <item itemvalue="JUnit.RabbitTest" />
+      <item itemvalue="JUnit.RabbitTest.reduceStock" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CornFarmerTest" />
+        <item itemvalue="JUnit.RabbitTest.reduceStock" />
+        <item itemvalue="JUnit.RabbitTest" />
         <item itemvalue="JUnit.RadishFarmerTest" />
+        <item itemvalue="JUnit.CornFarmerTest" />
         <item itemvalue="JUnit.CornFarmerTest.process" />
-        <item itemvalue="JUnit.CornFarmerTest.isCorn" />
-        <item itemvalue="JUnit.ProduceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -377,42 +389,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RadishFarmerTest - 2018.10.15 at 11h 02m 56s.xml">
-      <configuration name="RadishFarmerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RadishFarmerTest - 2018.10.15 at 11h 03m 10s.xml">
-      <configuration name="RadishFarmerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RadishFarmerTest - 2018.10.15 at 11h 04m 07s.xml">
-      <configuration name="RadishFarmerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RadishFarmerTest - 2018.10.15 at 11h 04m 11s.xml">
-      <configuration name="RadishFarmerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RadishFarmerTest - 2018.10.15 at 11h 05m 00s.xml">
-      <configuration name="RadishFarmerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CornFarmerTest - 2018.10.15 at 11h 05m 26s.xml">
+    <history-entry file="CornFarmerTest - 2018.10.16 at 09h 18m 08s.xml">
       <configuration name="CornFarmerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CornFarmerTest - 2018.10.15 at 11h 05m 37s.xml">
-      <configuration name="CornFarmerTest" configurationId="JUnit" />
+    <history-entry file="RadishFarmerTest - 2018.10.16 at 09h 19m 33s.xml">
+      <configuration name="RadishFarmerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CornFarmerTest - 2018.10.15 at 11h 05m 44s.xml">
-      <configuration name="CornFarmerTest" configurationId="JUnit" />
+    <history-entry file="RabbitTest - 2018.10.16 at 09h 42m 47s.xml">
+      <configuration name="RabbitTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CornFarmerTest - 2018.10.15 at 11h 05m 48s.xml">
-      <configuration name="CornFarmerTest" configurationId="JUnit" />
+    <history-entry file="RabbitTest_reduceStock - 2018.10.16 at 09h 47m 09s.xml">
+      <configuration name="RabbitTest.reduceStock" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CornFarmerTest - 2018.10.15 at 11h 06m 43s.xml">
-      <configuration name="CornFarmerTest" configurationId="JUnit" />
+    <history-entry file="RabbitTest_reduceStock - 2018.10.16 at 09h 48m 11s.xml">
+      <configuration name="RabbitTest.reduceStock" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RabbitTest_reduceStock - 2018.10.16 at 09h 48m 38s.xml">
+      <configuration name="RabbitTest.reduceStock" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RabbitTest_reduceStock - 2018.10.16 at 09h 50m 06s.xml">
+      <configuration name="RabbitTest.reduceStock" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RabbitTest_reduceStock - 2018.10.16 at 09h 50m 43s.xml">
+      <configuration name="RabbitTest.reduceStock" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RabbitTest_reduceStock - 2018.10.16 at 09h 50m 56s.xml">
+      <configuration name="RabbitTest.reduceStock" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RabbitTest_reduceStock - 2018.10.16 at 09h 51m 16s.xml">
+      <configuration name="RabbitTest.reduceStock" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1080" height="1920" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2848837" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29069766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -421,7 +433,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295838" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295838" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998875" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -488,12 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -502,13 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -523,50 +522,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Produce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ProduceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Produce.java" />
+    <entry file="file://$PROJECT_DIR$/tests/ProduceTest.java" />
     <entry file="file://$PROJECT_DIR$/src/EmptyItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#103#104#0" expanded="true" />
-            <element signature="e#125#126#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,68 +541,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RadishFarmerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/AbstractGrid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-          <folding>
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CornFarmerTest.java">
+    <entry file="file://$PROJECT_DIR$/tests/BeaverTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="330">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Beaver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="38" />
           <folding>
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RadishFarmer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CornFarmer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="165">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/CornFarmerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/RadishFarmerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/GridTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        <state relative-caret-position="435">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/RabbitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rabbit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+          <folding>
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

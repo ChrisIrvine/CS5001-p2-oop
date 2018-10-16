@@ -13,18 +13,6 @@ public class CornFarmerTest {
         grid = new Grid(3, 5);
         corn = new CornFarmer(grid, 1, 1);
         tS = new TimeStep();
-        grid.registerItem(1, 1, corn);
-    }
-
-    @Test
-    public void getProduceValue() {
-        assertEquals(5, corn.getProduceValue());
-    }
-
-    @Test
-    public void setProduceValue() {
-        corn.setProduceValue(7);
-        assertEquals(7, corn.getProduceValue());
     }
 
     @Test
@@ -33,10 +21,17 @@ public class CornFarmerTest {
     }
 
     @Test
+    public void getPRODUCEVALUE() { assertEquals(5, corn.getPRODUCEVALUE()); }
+
+    @Test
+    public void getPRODUCTION() { assertEquals(5, corn.getPRODUCTION()); }
+
+    @Test
     public void addToStock() {
         corn.addToStock(4);
         assertEquals(4, corn.getStock());
-
+        corn.addToStock(-5);
+        assertEquals(4, corn.getStock());
     }
 
     @Test
@@ -44,12 +39,16 @@ public class CornFarmerTest {
         corn.addToStock(4);
         corn.reduceStock(2);
         assertEquals(2, corn.getStock());
+        corn.reduceStock(-1);
+        assertEquals(1, corn.getStock());
+        corn.reduceStock(10);
+        assertEquals(0, corn.getStock());
     }
 
     @Test
     public void setStock() {
-        corn.setStock(0);
-        assertEquals(0, corn.getStock());
+        corn.setStock(6);
+        assertEquals(6, corn.getStock());
     }
 
     @Test

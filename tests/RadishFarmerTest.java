@@ -13,7 +13,6 @@ public class RadishFarmerTest {
         grid = new Grid(3, 5);
         radish = new RadishFarmer(grid, 1, 1);
         tS = new TimeStep();
-        grid.registerItem(1, 1, radish);
     }
 
     @Test
@@ -27,18 +26,6 @@ public class RadishFarmerTest {
     }
 
     @Test
-    public void setProduction() {
-        radish.setProduction(14);
-        assertEquals(14, radish.getProduction());
-    }
-
-    @Test
-    public void setProduceValue() {
-        radish.setProduceValue(7);
-        assertEquals(7, radish.getProduceValue());
-    }
-
-    @Test
     public void getStock() {
         assertEquals(0, radish.getStock());
     }
@@ -47,7 +34,8 @@ public class RadishFarmerTest {
     public void addToStock() {
         radish.addToStock(4);
         assertEquals(4, radish.getStock());
-
+        radish.addToStock(-5);
+        assertEquals(4, radish.getStock());
     }
 
     @Test
@@ -55,6 +43,10 @@ public class RadishFarmerTest {
         radish.addToStock(4);
         radish.reduceStock(2);
         assertEquals(2, radish.getStock());
+        radish.reduceStock(-1);
+        assertEquals(1, radish.getStock());
+        radish.reduceStock(10);
+        assertEquals(0, radish.getStock());
     }
 
     @Test

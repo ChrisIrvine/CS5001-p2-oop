@@ -2,13 +2,14 @@ public class CornFarmer extends AbstractItem {
 
     private int[] deny = {1, 2, 1, 2};
     private int stock = 0;
-    private int produceValue = 5;
-    private int production = 5;
+    private final int PRODUCEVALUE = 5;
+    private final int PRODUCTION = 5;
 
     CornFarmer(Grid grid, int x, int y) {
         this.grid = grid;
         this.xCoordinate = x;
         this.yCoordinate = y;
+        grid.registerItem(x, y, this);
     }
 
     @Override
@@ -20,34 +21,30 @@ public class CornFarmer extends AbstractItem {
         this.stock = stock;
     }
 
+    int getPRODUCEVALUE() {
+        return this.PRODUCEVALUE;
+    }
+
+    int getPRODUCTION() {
+        return this.PRODUCTION;
+    }
+
     @Override
     protected void addToStock(int nutrition) {
-        this.stock += nutrition;
+        if(nutrition > 0) { this.stock += nutrition; }
     }
 
     @Override
     protected void reduceStock(int nutrition) {
+        if (nutrition < 0) {
+            nutrition = Math.abs(nutrition);
+        }
+
         if (this.stock - nutrition < 0) {
-            this.stock = 0;
+            this.setStock(0);
         } else {
             this.stock -= nutrition;
         }
-    }
-
-    int getProduceValue() {
-        return this.produceValue;
-    }
-
-    void setProduceValue(int value) {
-        this.produceValue = value;
-    }
-
-    public int getProduction() {
-        return this.production;
-    }
-
-    public void setProduction(int production) {
-        this.production = production;
     }
 
     @Override
@@ -77,7 +74,9 @@ public class CornFarmer extends AbstractItem {
                 }
             }
             if (goodToProduce) {
-                addToStock(this.produceValue * production);
+                int production = this.PRODUCEVALUE * this.PRODUCTION;
+                addToStock(production);
+                grid.recordProduction(production);
             }
         }
     }
