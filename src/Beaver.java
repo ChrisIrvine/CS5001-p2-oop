@@ -10,7 +10,7 @@ public class Beaver extends AbstractItem {
         this.grid = grid;
         this.xCoordinate = x;
         this.yCoordinate = y;
-        grid.registerItem(x, y, this);
+        this.grid.registerItem(x, y, this);
     }
 
     @Override
@@ -60,5 +60,10 @@ public class Beaver extends AbstractItem {
         } else if (nutrition > 0) {
             this.stock -= nutrition;
         }
+    }
+
+    @Override
+    public String toString() {
+        return ("Beaver(" + this.getStock() + ")");
     }
 }

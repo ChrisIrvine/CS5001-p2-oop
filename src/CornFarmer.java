@@ -80,4 +80,9 @@ public class CornFarmer extends AbstractItem {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return ("   Corn(" + this.getStock() + ")    ");
+    }
 }

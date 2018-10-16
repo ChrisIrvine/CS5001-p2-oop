@@ -77,4 +77,9 @@ public class RadishFarmer extends AbstractItem{
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return ("  Radish(" + this.getStock() + ")   ");
+    }
 }

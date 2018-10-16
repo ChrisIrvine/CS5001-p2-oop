@@ -1,4 +1,6 @@
 public class EmptyItem extends AbstractItem {
+    public int stock;
+
     @Override
     public void process(TimeStep timeStep) {
         return;
@@ -6,16 +8,29 @@ public class EmptyItem extends AbstractItem {
 
     @Override
     protected int getStock() {
-        return 0;
+        return this.stock;
     }
 
     @Override
     protected void addToStock(int nutrition) {
-        return;
+        if (nutrition < 0 ) {
+            nutrition = Math.abs(nutrition);
+        }
+
+        this.stock += nutrition;
     }
 
     @Override
     protected void reduceStock(int nutrition) {
-        return;
+        if (nutrition < 0 ) {
+            nutrition = Math.abs(nutrition);
+        }
+
+        this.stock -= nutrition;
+    }
+
+    @Override
+    public String toString() {
+        return ("              ");
     }
 }

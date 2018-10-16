@@ -2,25 +2,51 @@ public class VerticalTransporter extends AbstractItem {
     private Grid grid;
     private int xCoordinate;
     private int yCoordinate;
-    private final int CAPACITY;
+    private int capacity;
     private int stock = 0;
 
     VerticalTransporter (Grid grid, int x, int y, int cap) {
         this.grid = grid;
         this.xCoordinate = x;
         this.yCoordinate = y;
-        this.CAPACITY = cap;
+        this.capacity = cap;
         grid.registerItem(this.xCoordinate, this.yCoordinate, this);
     }
 
     @Override
     public void process(TimeStep timeStep) {
-
+        if(grid.getStockAt(xCoordinate, yCoordinate - 1) >= this.capacity) {
+            grid.reduceStockAt(xCoordinate, yCoordinate - 1, this.capacity);
+            grid.addToStockAt(xCoordinate, yCoordinate  + 1, this.capacity);
+        } else if(grid.getStockAt(xCoordinate, yCoordinate  + 1) >= this.capacity) {
+            grid.reduceStockAt(xCoordinate, yCoordinate  + 1, this.capacity);
+            grid.addToStockAt(xCoordinate, yCoordinate - 1, this.capacity);
+        } else if(grid.getStockAt(xCoordinate, yCoordinate - 1) > 0 &&
+                grid.getStockAt(xCoordinate, yCoordinate - 1) < capacity) {
+            int tempStock = grid.getStockAt(xCoordinate, yCoordinate - 1);
+            grid.reduceStockAt(xCoordinate, yCoordinate - 1, tempStock);
+            grid.addToStockAt(xCoordinate, yCoordinate  + 1, tempStock);
+        } else if(grid.getStockAt(xCoordinate, yCoordinate  + 1) > 0 &&
+                grid.getStockAt(xCoordinate, yCoordinate  + 1) < capacity) {
+            int tempStock = grid.getStockAt(xCoordinate, yCoordinate  + 1);
+            grid.reduceStockAt(xCoordinate, yCoordinate - 1, tempStock);
+            grid.addToStockAt(xCoordinate, yCoordinate + 1, tempStock);
+        }
     }
 
     @Override
     protected int getStock() {
-        return 0;
+        return this.stock;
+    }
+
+    protected void setStock(int stock) {
+        if (stock > this.capacity) {
+            this.setStock(this.capacity);
+        } else if (stock < 0 ){
+            this.setStock(Math.abs(stock));
+        } else {
+            this.stock = stock;
+        }
     }
 
     @Override
@@ -29,10 +55,12 @@ public class VerticalTransporter extends AbstractItem {
             nutrition = Math.abs(nutrition);
         }
 
-        if (nutrition < this.CAPACITY) {
+        if ((nutrition+this.stock) > this.capacity) {
+            this.setStock(10);
+        } else if (nutrition < this.capacity) {
             this.stock += nutrition;
         } else {
-            this.stock += this.CAPACITY;
+            this.stock += this.capacity;
         }
     }
 
@@ -42,10 +70,17 @@ public class VerticalTransporter extends AbstractItem {
             nutrition = Math.abs(nutrition);
         }
 
-        if (nutrition < this.CAPACITY) {
+        if ((this.stock - nutrition) < 0) {
+            this.setStock(0);
+        } else if (nutrition < this.capacity) {
             this.stock -= nutrition;
         } else {
-            this.stock -= this.CAPACITY;
+            this.stock -= this.capacity;
         }
+    }
+
+    @Override
+    public String toString() {
+        return ("      VT      ");
     }
 }

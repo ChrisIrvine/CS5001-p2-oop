@@ -1,5 +1,3 @@
-import java.util.regex.Matcher;
-
 public class Rabbit extends AbstractItem{
 
     protected Grid grid;
@@ -12,7 +10,7 @@ public class Rabbit extends AbstractItem{
         this.grid = grid;
         this.xCoordinate = x;
         this.yCoordinate = y;
-        grid.registerItem(x, y, this);
+        this.grid.registerItem(x, y, this);
     }
 
     @Override
@@ -66,5 +64,10 @@ public class Rabbit extends AbstractItem{
         } else if (nutrition > 0) {
             this.stock -= nutrition;
         }
+    }
+
+    @Override
+    public String toString() {
+        return ("Rabbit(" + this.getStock() + ")");
     }
 }
