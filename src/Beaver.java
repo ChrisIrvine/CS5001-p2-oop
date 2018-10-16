@@ -21,8 +21,14 @@ public class Beaver extends AbstractItem {
         }
     }
 
-    protected void setStock(int stock) {
-        this.stock = stock;
+    void setStock(int stock) {
+        if (stock > 50) {
+            this.setStock(50);
+        } else if (stock < 0 ){
+            this.setStock(Math.abs(stock));
+        } else {
+            this.stock = stock;
+        }
     }
 
     @Override
@@ -32,19 +38,27 @@ public class Beaver extends AbstractItem {
 
     @Override
     protected void addToStock(int nutrition) {
-        if (nutrition > 0) {
+        if (nutrition < 0 ) {
+            nutrition = Math.abs(nutrition);
+        }
+
+        if ((this.stock + nutrition) > 50) {
+            setStock(50);
+        } else if (nutrition > 0) {
             this.stock += nutrition;
-        } else if ((this.stock + nutrition) > 50) {
-            this.setStock(50);
         }
     }
 
     @Override
     protected void reduceStock(int nutrition) {
-        if (nutrition > 0) {
-            this.stock -= nutrition;
-        } else if  ((this.stock - nutrition) < 0) {
+        if (nutrition < 0) {
+            nutrition = Math.abs(nutrition);
+        }
+
+        if ((this.stock - nutrition) < 0) {
             this.setStock(0);
+        } else if (nutrition > 0) {
+            this.stock -= nutrition;
         }
     }
 }

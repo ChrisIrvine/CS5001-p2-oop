@@ -81,7 +81,9 @@ public class Grid extends AbstractGrid {
 
     @Override
     public void recordProduction(int nutrition) {
-        if (nutrition > 0) {
+        System.out.println("adding " + nutrition + " nutrition");
+        if(nutrition > 0) {
+            System.out.println(nutrition);
             this.totalProduction += nutrition;
         }
     }

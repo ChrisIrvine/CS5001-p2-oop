@@ -2,7 +2,7 @@ import java.util.regex.Matcher;
 
 public class Rabbit extends AbstractItem{
 
-    private Grid grid;
+    protected Grid grid;
     private int xCoordinate;
     private int yCoordinate;
     private int stock;
@@ -17,13 +17,17 @@ public class Rabbit extends AbstractItem{
 
     @Override
     public void process(TimeStep timeStep) {
-        if(this.stock > 0) {
+        if(this.stock == 8 || this.stock > this.CONSUMPTION) {
             this.reduceStock(this.CONSUMPTION);
             grid.recordConsumption(this.CONSUMPTION);
+            this.setStock(0);
+        } else if (this.stock > 0) {
+            this.reduceStock(this.stock);
+            grid.recordConsumption(this.stock);
         }
     }
 
-    protected void setStock(int stock) {
+    void setStock(int stock) {
         if (stock > 8) {
             this.setStock(8);
         } else if (stock < 0 ){
@@ -40,10 +44,14 @@ public class Rabbit extends AbstractItem{
 
     @Override
     protected void addToStock(int nutrition) {
-        if (nutrition < 0) {
-            this.stock += nutrition;
-        } else if ((this.stock + nutrition) > 8) {
+        if (nutrition < 0 ) {
+            nutrition = Math.abs(nutrition);
+        }
+
+        if ((this.stock + nutrition) > 8) {
             this.setStock(8);
+        } else if (nutrition > 0) {
+            this.stock += nutrition;
         }
     }
 

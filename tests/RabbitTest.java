@@ -49,7 +49,7 @@ public class RabbitTest {
         assertEquals(8, bugs.getStock());
         bugs.setStock(0);
         bugs.addToStock(-4);
-        assertEquals(0, bugs.getStock());
+        assertEquals(4, bugs.getStock());
     }
 
     @Test
