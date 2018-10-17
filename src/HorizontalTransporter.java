@@ -1,52 +1,68 @@
 public class HorizontalTransporter extends AbstractItem{
-    private Grid grid;
-    private int xCoordinate;
-    private int yCoordinate;
+
     private int capacity;
-    private int stock = 0;
 
     HorizontalTransporter (Grid grid, int x, int y, int cap) {
         this.grid = grid;
         this.xCoordinate = x;
         this.yCoordinate = y;
         this.capacity = cap;
-        this.grid.registerItem(this.xCoordinate, this.yCoordinate, this);
+        this.grid.registerItem(x, y, this);
     }
 
     @Override
     public void process(TimeStep timeStep) {
-        if(grid.getStockAt(xCoordinate - 1, yCoordinate) >= this.capacity) {
-            grid.reduceStockAt(xCoordinate - 1, yCoordinate, this.capacity);
-            grid.addToStockAt(xCoordinate + 1, yCoordinate, this.capacity);
-        } else if(grid.getStockAt(xCoordinate + 1, yCoordinate) >= this.capacity) {
-            grid.reduceStockAt(xCoordinate + 1, yCoordinate, this.capacity);
-            grid.addToStockAt(xCoordinate -1, yCoordinate, this.capacity);
-        } else if(grid.getStockAt(xCoordinate - 1, yCoordinate) > 0 &&
-                grid.getStockAt(xCoordinate - 1, yCoordinate) < capacity) {
-            int tempStock = grid.getStockAt(xCoordinate - 1, yCoordinate);
-            grid.reduceStockAt(xCoordinate - 1, yCoordinate, tempStock);
-            grid.addToStockAt(xCoordinate + 1, yCoordinate, tempStock);
-        } else if(grid.getStockAt(xCoordinate + 1, yCoordinate) > 0 &&
-                grid.getStockAt(xCoordinate + 1, yCoordinate) < capacity) {
-            int tempStock = grid.getStockAt(xCoordinate + 1, yCoordinate);
-            grid.reduceStockAt(xCoordinate - 1, yCoordinate, tempStock);
-            grid.addToStockAt(xCoordinate + 1, yCoordinate, tempStock);
+        int foundFarm = this.farmCheck();
+        if(foundFarm >= 0) {
+            int foundDest = this.destinationCheck();
+            if(foundDest >= 0) {
+                this.transportGoods(foundFarm, foundDest,
+                        this.stockCheck(foundFarm));
+            }
         }
+    }
+
+    private void transportGoods(int start, int finish, int nutrition) {
+        this.grid.reduceStockAt(xCoordinate, start, nutrition);
+        this.grid.addToStockAt(xCoordinate, finish, nutrition);
+
+    }
+
+    private int stockCheck(int y) {
+        int tempStock = this.grid.getStockAt(this.xCoordinate, y);
+
+        if((tempStock - this.capacity) < 0 && tempStock > 0) {
+            return tempStock;
+        } else {
+            return this.capacity;
+        }
+    }
+
+    private int farmCheck() {
+        for(int i = 0; i < this.grid.getWidth(); i++) {
+            if(this.grid.getItem(xCoordinate, i) instanceof CornFarmer ||
+                this.grid.getItem(xCoordinate, i) instanceof RadishFarmer) {
+                if(this.grid.getItem(xCoordinate, i).getStock() > 0) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
+    private int destinationCheck() {
+        for(int i = 0; i < this.grid.getWidth(); i++) {
+            if(this.grid.getItem(xCoordinate, i) instanceof Rabbit ||
+                    this.grid.getItem(xCoordinate, i) instanceof Beaver) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     protected int getStock() {
-        return this.stock;
-    }
-
-    protected void setStock(int stock) {
-        if (stock > this.capacity) {
-            this.setStock(this.capacity);
-        } else if (stock < 0 ){
-            this.setStock(Math.abs(stock));
-        } else {
-            this.stock = stock;
-        }
+        return this.grid.getStockAt(this.xCoordinate, this.yCoordinate);
     }
 
     @Override
@@ -56,9 +72,9 @@ public class HorizontalTransporter extends AbstractItem{
         }
 
         if (nutrition < this.capacity) {
-            this.grid.addToStockAt(xCoordinate, yCoordinate, nutrition);
+            this.grid.stock[xCoordinate][yCoordinate] += nutrition;
         } else {
-            this.grid.addToStockAt(xCoordinate, yCoordinate, this.capacity);
+            this.grid.stock[xCoordinate][yCoordinate] += this.capacity;
         }
     }
 
@@ -68,13 +84,12 @@ public class HorizontalTransporter extends AbstractItem{
             nutrition = Math.abs(nutrition);
         }
 
-        if ((this.stock - nutrition) < 0) {
+        if ((this.grid.getStockAt(this.xCoordinate, this.yCoordinate) - nutrition) < 0) {
             this.grid.emptyStockAt(xCoordinate, yCoordinate);
         } else if (nutrition < this.capacity) {
-            this.grid.reduceStockAt(xCoordinate, yCoordinate, nutrition);
+            this.grid.stock[xCoordinate][yCoordinate] -= nutrition;
         } else {
-            System.out.println("reducing stock");
-            this.grid.reduceStockAt(xCoordinate, yCoordinate, this.capacity);
+            this.grid.stock[xCoordinate][yCoordinate] -= this.capacity;
         }
     }
 

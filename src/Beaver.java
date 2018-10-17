@@ -3,7 +3,6 @@ public class Beaver extends AbstractItem {
     private Grid grid;
     private int xCoordinate;
     private int yCoordinate;
-    private int stock;
     private final int CONSUMPTION = 5;
 
     Beaver(Grid grid, int x, int y) {
@@ -15,25 +14,14 @@ public class Beaver extends AbstractItem {
 
     @Override
     public void process(TimeStep timeStep) {
-        if(this.stock > 0) {
+        if(this.getStock() > 0) {
             this.reduceStock(this.CONSUMPTION);
-            grid.recordConsumption(this.CONSUMPTION);
-        }
-    }
-
-    void setStock(int stock) {
-        if (stock > 50) {
-            this.setStock(50);
-        } else if (stock < 0 ){
-            this.setStock(Math.abs(stock));
-        } else {
-            this.stock = stock;
         }
     }
 
     @Override
     protected int getStock() {
-        return this.stock;
+        return this.grid.getStockAt(this.xCoordinate, this.yCoordinate);
     }
 
     @Override
@@ -42,10 +30,10 @@ public class Beaver extends AbstractItem {
             nutrition = Math.abs(nutrition);
         }
 
-        if ((this.stock + nutrition) > 50) {
-            setStock(50);
+        if ((this.getStock() + nutrition) > 50) {
+            this.grid.stock[xCoordinate][yCoordinate] = 55;
         } else if (nutrition > 0) {
-            this.stock += nutrition;
+            this.grid.stock[xCoordinate][yCoordinate] += nutrition;
         }
     }
 
@@ -55,10 +43,14 @@ public class Beaver extends AbstractItem {
             nutrition = Math.abs(nutrition);
         }
 
-        if ((this.stock - nutrition) < 0) {
-            this.setStock(0);
-        } else if (nutrition > 0) {
-            this.stock -= nutrition;
+        if ((this.getStock() - nutrition) < 0) {
+            this.reduceStock(this.getStock());
+        } else if (this.getStock() < this.CONSUMPTION) {
+            this.grid.stock[xCoordinate][yCoordinate] -= nutrition;
+            this.grid.recordConsumption(nutrition);
+        } else if (this.getStock() >= this.CONSUMPTION ) {
+            this.grid.stock[xCoordinate][yCoordinate] -= this.CONSUMPTION;
+            this.grid.recordConsumption(this.CONSUMPTION);
         }
     }
 

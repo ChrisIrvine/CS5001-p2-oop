@@ -6,15 +6,16 @@ public class GridTest {
     Grid grid;
     CornFarmer tim;
     HorizontalTransporter hz;
-    Beaver beaver;
+    //Beaver beaver;
+    Rabbit bugs;
     TimeStep ts;
 
     @Before
     public void setUp() {
-        grid = new Grid(1, 3);
+        grid = new Grid(2, 3);
         tim = new CornFarmer(this.grid, 0, 0);
-        hz = new HorizontalTransporter(this.grid, 0, 1, 10);
-        beaver = new Beaver(this.grid, 0, 2);
+        hz = new HorizontalTransporter(this.grid, 1, 1, 10);
+        bugs = new Rabbit(this.grid, 0, 2);
         ts = new TimeStep();
     }
 
@@ -55,16 +56,16 @@ public class GridTest {
     @org.junit.Test
     public void processItems() {
         assertEquals(tim, grid.getItem(0, 0));
-        assertEquals(hz, grid.getItem(0, 1));
-        assertEquals(beaver, grid.getItem(0, 2));
-        for(int i = 0; i < 4; i++) {
+        assertEquals(hz, grid.getItem(1, 1));
+        assertEquals(bugs, grid.getItem(0, 2));
+        for(int i = 1; i < 6; i++) {
             grid.processItems(ts);
             ts.increment();
         }
         assertEquals(25, grid.getTotalProduction());
-        assertEquals(15, grid.getStockAt(0, 0));
-        assertEquals(10, grid.getStockAt(0, 2));
-        assertEquals(5, grid.getTotalConsumption());
+        assertEquals(25, grid.getStockAt(0, 0));
+        assertEquals(0, grid.getStockAt(0, 2));
+        assertEquals(0, grid.getTotalConsumption());
     }
 
     @org.junit.Test

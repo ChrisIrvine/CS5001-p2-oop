@@ -32,21 +32,11 @@ public class HorizontalTransporterTest {
         assertEquals(0, hz.getStock());
     }
 
-    @Test
-    public void setStock() {
-        hz.setStock(11);
-        assertEquals(10, hz.getStock());
-        hz.setStock(5);
-        assertEquals(5, hz.getStock());
-        hz.setStock(-7);
-        assertEquals(7, hz.getStock());
-    }
 
     @Test
     public void addToStock() {
         hz.addToStock(10);
         assertEquals(10, hz.getStock());
-        hz.setStock(0);
         hz.addToStock(5);
         assertEquals(5, hz.getStock());
         hz.addToStock(-4);
@@ -57,7 +47,6 @@ public class HorizontalTransporterTest {
 
     @Test
     public void reduceStock() {
-        hz.setStock(10);
         hz.reduceStock(5);
         assertEquals(5, hz.getStock());
         hz.reduceStock(-4);

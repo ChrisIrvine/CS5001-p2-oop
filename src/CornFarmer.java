@@ -1,7 +1,6 @@
 public class CornFarmer extends AbstractItem {
 
-    private int[] deny = {1, 2, 1, 2};
-    private int stock = 0;
+    private int[] deny = {-1, -2, 1, 2};
     private final int PRODUCEVALUE = 5;
     private final int PRODUCTION = 5;
 
@@ -9,7 +8,7 @@ public class CornFarmer extends AbstractItem {
         this.grid = grid;
         this.xCoordinate = x;
         this.yCoordinate = y;
-        grid.registerItem(x, y, this);
+        this.grid.registerItem(x, y, this);
     }
 
     @Override
@@ -30,7 +29,7 @@ public class CornFarmer extends AbstractItem {
         if(nutrition < 0) {
             this.addToStock(Math.abs(nutrition));
         } else if(nutrition > 0) {
-            this.grid.addToStockAt(xCoordinate, yCoordinate, nutrition);
+            this.grid.stock[xCoordinate][yCoordinate] += nutrition;
         }
     }
 
@@ -38,45 +37,62 @@ public class CornFarmer extends AbstractItem {
     protected void reduceStock(int nutrition) {
         if(nutrition < 0) {
             this.addToStock(Math.abs(nutrition));
-        } else if((nutrition - stock) < 0) {
+        } else if((this.getStock() - nutrition) <= 0) {
             this.grid.emptyStockAt(xCoordinate, yCoordinate);
         } else {
-            this.grid.addToStockAt(xCoordinate, yCoordinate, nutrition);
+            this.grid.stock[xCoordinate][yCoordinate] = this.getStock() - nutrition;
         }
     }
 
     @Override
     public void process(TimeStep timeStep) {
         int delay = 4;
-        boolean goodToProduce = false;
+        boolean foundFarmer = false;
         if(timeStep.getValue() % delay == 0) {
             for (int i = 0; i < this.deny.length; i++) {
-                if ((this.xCoordinate + this.deny[i]) < 0
-                        || (this.xCoordinate + this.deny[i])
-                        > grid.getHeight()
-                        || (this.yCoordinate + this.deny[i])
-                        < 0
-                        || (this.yCoordinate + this.deny[i])
-                        > grid.getWidth()) {
-                } else if (i % 2 == 0 && grid.getItem(this.xCoordinate +
-                        this.deny[i], this.yCoordinate) instanceof CornFarmer ||
-                        grid.getItem(this.xCoordinate + this.deny[i],
-                                this.yCoordinate) instanceof RadishFarmer) {
-                    goodToProduce = false;
-                    return;
-                } else if (i % 2 != 0 && grid.getItem(this.xCoordinate,
-                        this.yCoordinate + this.deny[i]) instanceof
-                        CornFarmer || grid.getItem(this.xCoordinate,
-                        this.yCoordinate + this.deny[i]) instanceof RadishFarmer) {
-                    goodToProduce = false;
-                    return;
-                } else {
-                    goodToProduce = true;
+                if(i % 2 == 0) { //must refer to height
+                    if(this.yCoordinate + deny[i] >= 0 && this.yCoordinate + deny[i] < this.grid.getWidth()) {
+                        if(this.grid.getItem(xCoordinate, (yCoordinate + deny[i])) instanceof CornFarmer ||
+                                this.grid.getItem(xCoordinate, (yCoordinate + deny[i])) instanceof RadishFarmer ) {
+                            foundFarmer = true;
+                        }
+                    }
+                } else if (i % 2 != 0) {
+                    if(this.xCoordinate + deny[i] >= 0 && this.xCoordinate + deny[i] < this.grid.getWidth()) {
+                        if(this.grid.getItem((xCoordinate + deny[i]), yCoordinate) instanceof CornFarmer ||
+                                this.grid.getItem((xCoordinate + deny[i]), yCoordinate) instanceof RadishFarmer ) {
+                            foundFarmer = true;
+                        }
+                    }
                 }
+
+// if ((this.xCoordinate + this.deny[i]) < 0 ||
+//                        (this.xCoordinate + this.deny[i]) > grid.getHeight() ||
+//                        (this.yCoordinate + this.deny[i]) < 0 ||
+//                        (this.yCoordinate + this.deny[i]) > grid.getWidth()) {
+//                    for (int j = 0; j < this.deny[i]; j++) {
+//                        if (i % 2 == 0 && (grid.getItem(this.xCoordinate +
+//                            this.deny[i], this.yCoordinate) instanceof CornFarmer ||
+//                            grid.getItem(this.xCoordinate + this.deny[i],
+//                                    this.yCoordinate) instanceof RadishFarmer)) {
+//                        goodToProduce = false;
+//                        return;
+//                        } else if (i % 2 != 0 && (grid.getItem(this.xCoordinate,
+//                            this.yCoordinate + this.deny[i]) instanceof
+//                            CornFarmer || grid.getItem(this.xCoordinate,
+//                            this.yCoordinate + this.deny[i]) instanceof RadishFarmer)) {
+//                        goodToProduce = false;
+//                        return;
+//                        } else {
+//                        goodToProduce = true;
+//                    }
+//                }
+            
+
             }
-            if (goodToProduce) {
+            if (!foundFarmer) {
                 int production = this.PRODUCEVALUE * this.PRODUCTION;
-                this.addToStock(production);
+                this.grid.addToStockAt(this.xCoordinate, this.yCoordinate, production);
                 grid.recordProduction(production);
             }
         }
@@ -84,6 +100,6 @@ public class CornFarmer extends AbstractItem {
 
     @Override
     public String toString() {
-        return ("   Corn(" + this.getStock() + ")    ");
+        return ("Corn(" + this.getStock() + ")");
     }
 }

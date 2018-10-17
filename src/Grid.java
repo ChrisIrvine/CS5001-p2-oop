@@ -50,8 +50,8 @@ public class Grid extends AbstractGrid {
 
     @Override
     public int getStockAt(int xCoordinate, int yCoordinate) {
-        if(xCoordinate >= 0 && xCoordinate < this.getWidth() &&
-                yCoordinate >= 0 && yCoordinate < this.getHeight()) {
+        if(xCoordinate >= 0 && xCoordinate < this.getHeight() &&
+                yCoordinate >= 0 && yCoordinate < this.getWidth()) {
             return this.stock[xCoordinate][yCoordinate];
         }
         return 0;
@@ -65,12 +65,12 @@ public class Grid extends AbstractGrid {
 
     @Override
     public void addToStockAt(int xCoordinate, int yCoordinate, int nutrition) {
-        this.stock[xCoordinate][yCoordinate] += nutrition;
+        this.getItem(xCoordinate, yCoordinate).addToStock(nutrition);
     }
 
     @Override
     public void reduceStockAt(int xCoordinate, int yCoordinate, int nutrition) {
-        this.stock[xCoordinate][yCoordinate] -= nutrition;
+        this.getItem(xCoordinate, yCoordinate).reduceStock(nutrition);
     }
 
     @Override
@@ -86,8 +86,8 @@ public class Grid extends AbstractGrid {
     @Override
     public void processItems(TimeStep timeStep) {
         for(int i = 1; i < 4; i++) {
-            for(int y = 0; y < this.getHeight(); y++) {
-                for(int x = 0; x < this.getWidth(); x++) {
+            for(int y = 0; y < this.getWidth(); y++) {
+                for(int x = 0; x < this.getHeight(); x++) {
                     switch (i) {
                         case 1:
                             if(this.getItem(x, y) instanceof CornFarmer ||
@@ -98,7 +98,6 @@ public class Grid extends AbstractGrid {
                         case 2:
                             if(this.getItem(x, y) instanceof HorizontalTransporter ||
                                     this.getItem(x, y) instanceof VerticalTransporter) {
-                                System.out.println("processing HT");
                                 this.getItem(x, y).process(timeStep);
                             }
                             break;
