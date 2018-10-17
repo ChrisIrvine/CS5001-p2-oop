@@ -8,11 +8,7 @@ public class Grid extends AbstractGrid {
 
     public Grid(int width, int height) {
         grid = new AbstractItem[width][height];
-//        for(int w = 0; w < width; w++) {
-//            for(int h = 0; h < height; h++) {
-//                grid[w][h] = new EmptyItem();
-//            }
-//        }
+        stock = new int[width][height];
     }
     /**
      *
@@ -40,41 +36,41 @@ public class Grid extends AbstractGrid {
      */
     @Override
     public void registerItem(int xCoordinate, int yCoordinate, AbstractItem item) {
-        grid[xCoordinate][yCoordinate] = item;
+        this.grid[xCoordinate][yCoordinate] = item;
     }
 
     @Override
     public AbstractItem getItem(int xCoordinate, int yCoordinate) {
-        if(xCoordinate > 0 && xCoordinate < this.getHeight() &&
-                yCoordinate > 0 && yCoordinate < this.getWidth()) {
-            return grid[xCoordinate][yCoordinate];
+        if(xCoordinate >= 0 && xCoordinate < this.getHeight() &&
+                yCoordinate >= 0 && yCoordinate < this.getWidth()) {
+            return this.grid[xCoordinate][yCoordinate];
         }
         return null;
     }
 
     @Override
     public int getStockAt(int xCoordinate, int yCoordinate) {
-        if(xCoordinate > 0 && xCoordinate < this.getWidth() &&
-                yCoordinate > 0 && yCoordinate < this.getHeight()) {
-            return this.getItem(xCoordinate, yCoordinate).getStock();
+        if(xCoordinate >= 0 && xCoordinate < this.getWidth() &&
+                yCoordinate >= 0 && yCoordinate < this.getHeight()) {
+            return this.stock[xCoordinate][yCoordinate];
         }
         return 0;
     }
 
     @Override
     public void emptyStockAt(int xCoordinate, int yCoordinate) {
-        int emptyStock = this.getItem(xCoordinate, yCoordinate).getStock();
-        this.getItem(xCoordinate, yCoordinate).reduceStock(emptyStock);
+        this.stock[xCoordinate][yCoordinate] = 0;
+
     }
 
     @Override
     public void addToStockAt(int xCoordinate, int yCoordinate, int nutrition) {
-        this.getItem(xCoordinate, yCoordinate).addToStock(nutrition);
+        this.stock[xCoordinate][yCoordinate] += nutrition;
     }
 
     @Override
     public void reduceStockAt(int xCoordinate, int yCoordinate, int nutrition) {
-        this.getItem(xCoordinate, yCoordinate).reduceStock(nutrition);
+        this.stock[xCoordinate][yCoordinate] -= nutrition;
     }
 
     @Override
@@ -94,16 +90,15 @@ public class Grid extends AbstractGrid {
                 for(int x = 0; x < this.getWidth(); x++) {
                     switch (i) {
                         case 1:
-                            System.out.println(this.getItem(x, y) instanceof CornFarmer);
                             if(this.getItem(x, y) instanceof CornFarmer ||
                                     this.getItem(x, y) instanceof RadishFarmer) {
-                                System.out.println("farming");
                                 this.getItem(x, y).process(timeStep);
                             }
                             break;
                         case 2:
                             if(this.getItem(x, y) instanceof HorizontalTransporter ||
                                     this.getItem(x, y) instanceof VerticalTransporter) {
+                                System.out.println("processing HT");
                                 this.getItem(x, y).process(timeStep);
                             }
                             break;

@@ -46,12 +46,6 @@ public class CornFarmerTest {
     }
 
     @Test
-    public void setStock() {
-        corn.setStock(6);
-        assertEquals(6, corn.getStock());
-    }
-
-    @Test
     public void process() {
         tS.increment();
         tS.increment();

@@ -55,12 +55,10 @@ public class HorizontalTransporter extends AbstractItem{
             nutrition = Math.abs(nutrition);
         }
 
-        if ((nutrition+this.stock) > this.capacity) {
-            this.setStock(10);
-        } else if (nutrition < this.capacity) {
-            this.stock += nutrition;
+        if (nutrition < this.capacity) {
+            this.grid.addToStockAt(xCoordinate, yCoordinate, nutrition);
         } else {
-            this.stock += this.capacity;
+            this.grid.addToStockAt(xCoordinate, yCoordinate, this.capacity);
         }
     }
 
@@ -71,16 +69,17 @@ public class HorizontalTransporter extends AbstractItem{
         }
 
         if ((this.stock - nutrition) < 0) {
-            this.setStock(0);
+            this.grid.emptyStockAt(xCoordinate, yCoordinate);
         } else if (nutrition < this.capacity) {
-            this.stock -= nutrition;
+            this.grid.reduceStockAt(xCoordinate, yCoordinate, nutrition);
         } else {
-            this.stock -= this.capacity;
+            System.out.println("reducing stock");
+            this.grid.reduceStockAt(xCoordinate, yCoordinate, this.capacity);
         }
     }
 
     @Override
     public String toString() {
-        return ("      HT      ");
+        return ("HT");
     }
 }

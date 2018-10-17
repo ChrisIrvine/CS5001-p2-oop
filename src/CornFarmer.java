@@ -14,11 +14,7 @@ public class CornFarmer extends AbstractItem {
 
     @Override
     protected int getStock() {
-        return this.stock;
-    }
-
-    void setStock(int stock) {
-        this.stock = stock;
+        return this.grid.getStockAt(xCoordinate, yCoordinate);
     }
 
     int getPRODUCEVALUE() {
@@ -31,19 +27,21 @@ public class CornFarmer extends AbstractItem {
 
     @Override
     protected void addToStock(int nutrition) {
-        if(nutrition > 0) { this.stock += nutrition; }
+        if(nutrition < 0) {
+            this.addToStock(Math.abs(nutrition));
+        } else if(nutrition > 0) {
+            this.grid.addToStockAt(xCoordinate, yCoordinate, nutrition);
+        }
     }
 
     @Override
     protected void reduceStock(int nutrition) {
-        if (nutrition < 0) {
-            nutrition = Math.abs(nutrition);
-        }
-
-        if (this.stock - nutrition < 0) {
-            this.setStock(0);
+        if(nutrition < 0) {
+            this.addToStock(Math.abs(nutrition));
+        } else if((nutrition - stock) < 0) {
+            this.grid.emptyStockAt(xCoordinate, yCoordinate);
         } else {
-            this.stock -= nutrition;
+            this.grid.addToStockAt(xCoordinate, yCoordinate, nutrition);
         }
     }
 
@@ -61,12 +59,15 @@ public class CornFarmer extends AbstractItem {
                         || (this.yCoordinate + this.deny[i])
                         > grid.getWidth()) {
                 } else if (i % 2 == 0 && grid.getItem(this.xCoordinate +
-                        this.deny[i], this.yCoordinate) instanceof CornFarmer) {
+                        this.deny[i], this.yCoordinate) instanceof CornFarmer ||
+                        grid.getItem(this.xCoordinate + this.deny[i],
+                                this.yCoordinate) instanceof RadishFarmer) {
                     goodToProduce = false;
                     return;
                 } else if (i % 2 != 0 && grid.getItem(this.xCoordinate,
                         this.yCoordinate + this.deny[i]) instanceof
-                        CornFarmer) {
+                        CornFarmer || grid.getItem(this.xCoordinate,
+                        this.yCoordinate + this.deny[i]) instanceof RadishFarmer) {
                     goodToProduce = false;
                     return;
                 } else {
@@ -75,7 +76,7 @@ public class CornFarmer extends AbstractItem {
             }
             if (goodToProduce) {
                 int production = this.PRODUCEVALUE * this.PRODUCTION;
-                addToStock(production);
+                this.addToStock(production);
                 grid.recordProduction(production);
             }
         }
