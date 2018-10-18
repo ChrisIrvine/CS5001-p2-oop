@@ -4,9 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BeaverTest {
-    Beaver beaver;
-    Grid grid;
-    TimeStep ts;
+    private Beaver beaver;
+    private Grid grid;
+    private TimeStep ts;
 
     @Before
     public void setUp() {
@@ -44,7 +44,7 @@ public class BeaverTest {
         assertEquals(9, beaver.getStock());
         beaver.reduceStock(5);
         assertEquals(4, beaver.getStock());
-        beaver.reduceStock(5);
+        beaver.reduceStock(-5);
         assertEquals(0, beaver.getStock());
         assertEquals(9, grid.getTotalConsumption());
     }

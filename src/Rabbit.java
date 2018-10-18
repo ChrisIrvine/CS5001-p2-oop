@@ -56,7 +56,7 @@ public class Rabbit extends AbstractItem{
     /**
      * Mutator method to add stock to the current stock value of this Rabbit
      * Object. Stock will not be increased over 8, wasting any excess stock
-     * passed to the Rabbit. Also includes negative number hadnling.
+     * passed to the Rabbit. Also includes negative number handling.
      * @param nutrition - amount of nutrition to add
      */
     @Override
@@ -74,7 +74,7 @@ public class Rabbit extends AbstractItem{
 
     /**
      * Mutator method to subtract stock from the current stock value of this
-     * Rabbit Object. Stock cannot be decreased below 0 and will consumer either
+     * Rabbit Object. Stock cannot be decreased below 0 and will consume either
      * 8 or, in the case of less than 8 stock present, all the current stock.
      * Also includes negative number handling.
      * @param nutrition - amount of nutrition to subtract
@@ -103,7 +103,5 @@ public class Rabbit extends AbstractItem{
      * @return - formatted string as described above.
      */
     @Override
-    public String toString() {
-        return ("Rabbit(" + this.getStock() + ")");
-    }
+    public String toString() { return ("Rabbit(" + this.getStock() + ")"); }
 }
