@@ -35,7 +35,7 @@ public class RadishFarmer extends AbstractItem{
     @Override
     protected void reduceStock(int nutrition) {
         if(nutrition < 0) {
-            this.addToStock(Math.abs(nutrition));
+            this.reduceStock(Math.abs(nutrition));
         } else if((this.getStock() - nutrition) <= 0) {
             this.grid.emptyStockAt(xCoordinate, yCoordinate);
         } else {

@@ -88,13 +88,16 @@ public class Grid extends AbstractGrid {
 
     /**
      * Mutator method that will set the stock value at a given set of
-     * coordinates to 0.
+     * coordinates to 0. Includes out of bounds checking.
      * @param xCoordinate - height coordinate
      * @param yCoordinate - width coordinate
      */
     @Override
     public void emptyStockAt(int xCoordinate, int yCoordinate) {
-        this.stock[xCoordinate][yCoordinate] = 0;
+        if(xCoordinate >= 0 && xCoordinate < this.getHeight() &&
+                yCoordinate >= 0 && yCoordinate < this.getWidth()) {
+            this.stock[xCoordinate][yCoordinate] = 0;
+        }
 
     }
 
@@ -135,11 +138,10 @@ public class Grid extends AbstractGrid {
      */
     @Override
     public void setStockAt(int xCoordinate, int yCoordinate, int nutrition) {
-        if(xCoordinate > 0 && xCoordinate < this.getWidth() &&
-                yCoordinate > 0 && yCoordinate < this.getHeight()) {
-            int tempStock = this.getStockAt(xCoordinate, yCoordinate);
-            this.reduceStockAt(xCoordinate, yCoordinate, tempStock);
-            this.addToStockAt(xCoordinate, yCoordinate, nutrition);
+        if(xCoordinate >= 0 && xCoordinate < this.getWidth() &&
+                yCoordinate >= 0 && yCoordinate < this.getHeight()) {
+            this.emptyStockAt(xCoordinate, yCoordinate);
+            this.addToStockAt(yCoordinate, xCoordinate, nutrition);
         }
     }
 
@@ -198,9 +200,10 @@ public class Grid extends AbstractGrid {
     public void recordProduction(int nutrition) {
         if(nutrition < 0) {
             this.recordProduction(Math.abs(nutrition));
+        } else {
+            this.totalProduction += nutrition;
         }
 
-        this.totalProduction += nutrition;
     }
 
     /**
@@ -216,16 +219,16 @@ public class Grid extends AbstractGrid {
      * Mutator method to increase the totalConsumption value for this object.
      * Method contains a negative number check that will transform the number
      * into a positive number. This version of the game is not interested in
-     * reducing the totalConsumption. 
+     * reducing the totalConsumption.
      * @param nutrition -  the amount of consumption to record
      */
     @Override
     public void recordConsumption(int nutrition) {
         if(nutrition < 0) {
             this.recordConsumption(Math.abs(nutrition));
+        } else {
+            this.totalConsumption += nutrition;
         }
-
-        this.totalConsumption += nutrition;
     }
 
     /**
