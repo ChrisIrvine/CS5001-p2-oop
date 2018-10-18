@@ -4,9 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class RadishFarmerTest {
-    RadishFarmer radish;
-    TimeStep tS;
-    Grid grid;
+    private RadishFarmer radish;
+    private TimeStep tS;
+    private Grid grid;
 
     @Before
     public void setUp() {
@@ -35,7 +35,7 @@ public class RadishFarmerTest {
         radish.addToStock(4);
         assertEquals(4, radish.getStock());
         radish.addToStock(-5);
-        assertEquals(4, radish.getStock());
+        assertEquals(9, radish.getStock());
     }
 
     @Test
