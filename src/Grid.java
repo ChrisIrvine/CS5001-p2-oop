@@ -86,8 +86,8 @@ public class Grid extends AbstractGrid {
     @Override
     public void processItems(TimeStep timeStep) {
         for(int i = 1; i < 4; i++) {
-            for(int y = 0; y < this.getWidth(); y++) {
-                for(int x = 0; x < this.getHeight(); x++) {
+            for(int x = 0; x < this.getHeight(); x++) {
+                for(int y = 0; y < this.getWidth(); y++) {
                     switch (i) {
                         case 1:
                             if(this.getItem(x, y) instanceof CornFarmer ||

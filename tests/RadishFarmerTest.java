@@ -17,12 +17,12 @@ public class RadishFarmerTest {
 
     @Test
     public void getProduceValue() {
-        assertEquals(1, radish.getProduceValue());
+        assertEquals(1, radish.getPRODUCEVALUE());
     }
 
     @Test
     public void getProduction() {
-        assertEquals(10, radish.getProduction());
+        assertEquals(10, radish.getPRODUCTION());
     }
 
     @Test
@@ -46,12 +46,6 @@ public class RadishFarmerTest {
         radish.reduceStock(-1);
         assertEquals(1, radish.getStock());
         radish.reduceStock(10);
-        assertEquals(0, radish.getStock());
-    }
-
-    @Test
-    public void setStock() {
-        radish.setStock(0);
         assertEquals(0, radish.getStock());
     }
 

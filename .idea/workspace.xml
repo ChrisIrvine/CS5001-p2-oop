@@ -3,33 +3,38 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/tests/GridTest.java" line="60" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2d1e9437-980b-41fc-aa00-3f7bde6472ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Beaver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Beaver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/CornFarmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/CornFarmer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Grid.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/HorizontalTransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/HorizontalTransporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Rabbit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/Rabbit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/RadishFarmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/RadishFarmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS5001-p2-oop/VerticalTransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS5001-p2-oop/VerticalTransporter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/BeaverTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/CS5001-p2-oop/BeaverTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/GridTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/CS5001-p2-oop/GridTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/HorizontalTransporterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/CS5001-p2-oop/HorizontalTransporterTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/RabbitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/CS5001-p2-oop/RabbitTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Beaver.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beaver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Beaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/RadishFarmerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/CS5001-p2-oop/RadishFarmerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/CS5001-p2-oop/VerticalTransporterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/CS5001-p2-oop/VerticalTransporterTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CornFarmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/CornFarmer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CornFarmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CornFarmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HorizontalTransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/HorizontalTransporter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HorizontalTransporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HorizontalTransporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rabbit.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rabbit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rabbit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rabbit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadishFarmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadishFarmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RadishFarmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RadishFarmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VerticalTransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/VerticalTransporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VerticalTransporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VerticalTransporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/BeaverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/BeaverTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/GridTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GridTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/HorizontalTransporterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/HorizontalTransporterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/RabbitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RabbitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RadishFarmerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RadishFarmerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/VerticalTransporterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/VerticalTransporterTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,39 +59,40 @@
     <session id="1017237333">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.8" value="4" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="7" />
+          <entry key="class" value="11" />
           <entry key="groovy" value="2" />
-          <entry key="java" value="98" />
+          <entry key="java" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="7" />
+          <entry key="CLASS" value="11" />
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="90" />
+          <entry key="JAVA" value="102" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="18315" />
+          <entry key="java" value="20655" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="18237" />
+          <entry key="JAVA" value="20577" />
           <entry key="PLAIN_TEXT" value="78" />
         </counts>
       </usages-collector>
@@ -128,20 +134,29 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Beaver.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+                <state relative-caret-position="1">
+                  <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/CornFarmer.java">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Rabbit.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="148">
-                  <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+                <state relative-caret-position="421">
+                  <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/RadishFarmer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="405">
+                  <caret line="49" column="43" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="43" />
                   <folding>
-                    <element signature="e#3048#3049#0" expanded="true" />
-                    <element signature="e#3108#3109#0" expanded="true" />
+                    <element signature="e#2480#2481#0" expanded="true" />
+                    <element signature="e#2541#2542#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -150,8 +165,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Grid.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="43" selection-start-line="43" selection-end-line="43" />
+                <state relative-caret-position="165">
+                  <caret line="92" column="48" lean-forward="true" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
                   <folding>
                     <element signature="e#334#335#0" expanded="true" />
                     <element signature="e#371#372#0" expanded="true" />
@@ -163,10 +178,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/CornFarmer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="451">
+                  <caret line="67" selection-start-line="67" selection-end-line="67" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/HorizontalTransporter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+                <state relative-caret-position="637">
+                  <caret line="100" column="44" lean-forward="true" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -174,33 +198,16 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/RabbitTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/TimeStep.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="29" selection-start-line="29" selection-end-line="29" />
+                <state relative-caret-position="90">
+                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
                   <folding>
-                    <element signature="e#582#583#0" expanded="true" />
+                    <element signature="e#508#509#0" expanded="true" />
+                    <element signature="e#526#527#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Rabbit.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
                 </state>
               </provider>
             </entry>
@@ -208,8 +215,52 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/GridTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="203">
-                  <caret line="61" selection-start-line="61" selection-end-line="61" />
+                <state relative-caret-position="-157">
+                  <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/BeaverTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#515#516#0" expanded="true" />
+                    <element signature="e#565#566#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/VerticalTransporterTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="332">
+                  <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/RadishFarmerTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#370#371#0" expanded="true" />
+                    <element signature="e#427#428#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/VerticalTransporter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="47">
+                  <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -250,21 +301,21 @@
         <option value="$PROJECT_DIR$/tests/FarmerTest.java" />
         <option value="$PROJECT_DIR$/src/Farmer.java" />
         <option value="$PROJECT_DIR$/src/BasicGrid.java" />
-        <option value="$PROJECT_DIR$/tests/RadishFarmerTest.java" />
-        <option value="$PROJECT_DIR$/tests/VerticalTransporterTest.java" />
         <option value="$PROJECT_DIR$/src/EmptyItem.java" />
-        <option value="$PROJECT_DIR$/src/VerticalTransporter.java" />
-        <option value="$PROJECT_DIR$/src/RadishFarmer.java" />
         <option value="$PROJECT_DIR$/tests/CornFarmerTest.java" />
         <option value="$PROJECT_DIR$/tests/HorizontalTransporterTest.java" />
+        <option value="$PROJECT_DIR$/src/Beaver.java" />
+        <option value="$PROJECT_DIR$/src/Rabbit.java" />
+        <option value="$PROJECT_DIR$/tests/RadishFarmerTest.java" />
+        <option value="$PROJECT_DIR$/src/RadishFarmer.java" />
+        <option value="$PROJECT_DIR$/tests/VerticalTransporterTest.java" />
+        <option value="$PROJECT_DIR$/tests/RabbitTest.java" />
         <option value="$PROJECT_DIR$/tests/BeaverTest.java" />
         <option value="$PROJECT_DIR$/src/Grid.java" />
-        <option value="$PROJECT_DIR$/src/Beaver.java" />
-        <option value="$PROJECT_DIR$/src/HorizontalTransporter.java" />
-        <option value="$PROJECT_DIR$/src/Rabbit.java" />
-        <option value="$PROJECT_DIR$/tests/RabbitTest.java" />
-        <option value="$PROJECT_DIR$/tests/GridTest.java" />
+        <option value="$PROJECT_DIR$/src/VerticalTransporter.java" />
         <option value="$PROJECT_DIR$/src/CornFarmer.java" />
+        <option value="$PROJECT_DIR$/src/HorizontalTransporter.java" />
+        <option value="$PROJECT_DIR$/tests/GridTest.java" />
       </list>
     </option>
   </component>
@@ -281,9 +332,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1918" />
-    <option name="width" value="1064" />
-    <option name="height" value="1029" />
+    <option name="x" value="1920" />
+    <option name="width" value="1080" />
+    <option name="height" value="1920" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -295,6 +346,7 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,7 +368,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,7 +376,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539793458348" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539822327801" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -367,21 +418,29 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.GridTest.processItems">
-    <configuration name="GridTest.getHeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BeaverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS5001-p2-oop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GridTest" />
-      <option name="METHOD_NAME" value="getHeight" />
+      <option name="MAIN_CLASS_NAME" value="BeaverTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeaverTest.addToStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS5001-p2-oop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BeaverTest" />
+      <option name="METHOD_NAME" value="addToStock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GridTest.getWidth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BeaverTest.process" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS5001-p2-oop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GridTest" />
-      <option name="METHOD_NAME" value="getWidth" />
+      <option name="MAIN_CLASS_NAME" value="BeaverTest" />
+      <option name="METHOD_NAME" value="process" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -397,36 +456,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HorizontalTransporterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RabbitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS5001-p2-oop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HorizontalTransporterTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VerticalTransporterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS5001-p2-oop" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VerticalTransporterTest" />
+      <option name="MAIN_CLASS_NAME" value="RabbitTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.HorizontalTransporterTest" />
-      <item itemvalue="JUnit.VerticalTransporterTest" />
-      <item itemvalue="JUnit.GridTest.getWidth" />
-      <item itemvalue="JUnit.GridTest.getHeight" />
+      <item itemvalue="JUnit.RabbitTest" />
+      <item itemvalue="JUnit.BeaverTest" />
+      <item itemvalue="JUnit.BeaverTest.process" />
+      <item itemvalue="JUnit.BeaverTest.addToStock" />
       <item itemvalue="JUnit.GridTest.processItems" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GridTest.processItems" />
-        <item itemvalue="JUnit.GridTest.getHeight" />
-        <item itemvalue="JUnit.GridTest.getWidth" />
-        <item itemvalue="JUnit.VerticalTransporterTest" />
-        <item itemvalue="JUnit.HorizontalTransporterTest" />
+        <item itemvalue="JUnit.BeaverTest.addToStock" />
+        <item itemvalue="JUnit.BeaverTest" />
+        <item itemvalue="JUnit.BeaverTest.process" />
+        <item itemvalue="JUnit.RabbitTest" />
       </list>
     </recent_temporary>
   </component>
@@ -446,34 +497,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GridTest_processItems - 2018.10.17 at 16h 59m 47s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 00h 04m 42s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 16h 59m 59s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 00h 05m 37s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 00m 17s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 00h 05m 51s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 00m 56s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 00h 27m 35s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 01m 28s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 00h 29m 17s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 02m 23s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 00h 30m 48s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 02m 28s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 01h 00m 31s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 03m 32s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 01h 04m 46s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 09m 49s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 01h 24m 57s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GridTest_processItems - 2018.10.17 at 17h 10m 39s.xml">
+    <history-entry file="GridTest_processItems - 2018.10.18 at 01h 25m 29s.xml">
       <configuration name="GridTest.processItems" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -482,7 +533,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1080" height="1920" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2974806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -494,7 +544,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32932332" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32733408" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3982002" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3982002" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -548,24 +598,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tests/GridTest.java</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CornFarmer.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -589,39 +621,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RadishFarmerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Transport.java" />
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VerticalTransporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EmptyItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/VerticalTransporterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -632,42 +636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/BeaverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding>
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -682,41 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RadishFarmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HorizontalTransporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Rabbit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/RabbitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Beaver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TimeStep.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -727,17 +664,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/GridTest.java">
+    <entry file="file://$PROJECT_DIR$/tests/RadishFarmerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="330">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding>
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RadishFarmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="49" column="43" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="43" />
+          <folding>
+            <element signature="e#2480#2481#0" expanded="true" />
+            <element signature="e#2541#2542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/RabbitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/BeaverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Beaver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="53" column="173" selection-start-line="53" selection-start-column="173" selection-end-line="53" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AbstractGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-891">
+          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="165">
+          <caret line="92" column="48" lean-forward="true" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
           <folding>
             <element signature="e#334#335#0" expanded="true" />
             <element signature="e#371#372#0" expanded="true" />
@@ -747,14 +756,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/VerticalTransporterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rabbit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CornFarmer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-          <folding>
-            <element signature="e#3048#3049#0" expanded="true" />
-            <element signature="e#3108#3109#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="451">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HorizontalTransporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="100" column="44" lean-forward="true" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VerticalTransporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/GridTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>

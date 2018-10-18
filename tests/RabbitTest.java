@@ -17,6 +17,7 @@ public class RabbitTest {
 
     @Test
     public void process() {
+        bugs.addToStock(8);
         bugs.process(ts);
         assertEquals(0, bugs.getStock());
         assertEquals(8, grid.getTotalConsumption());
@@ -25,13 +26,30 @@ public class RabbitTest {
 
     @Test
     public void getStock() {
+        assertEquals(0, bugs.getStock());
     }
 
     @Test
     public void addToStock() {
+        bugs.addToStock(5);
+        assertEquals(5, bugs.getStock());
+        bugs.addToStock(16);
+        assertEquals(8, bugs.getStock());
+        bugs.addToStock(-8);
+        assertEquals(8, bugs.getStock());
     }
 
     @Test
     public void reduceStock() {
+        bugs.addToStock(16);
+        assertEquals(8, bugs.getStock());
+        bugs.reduceStock(8);
+        assertEquals(0, bugs.getStock());
+        assertEquals(8, grid.getTotalConsumption());
+        bugs.addToStock(5);
+        assertEquals(5, bugs.getStock());
+        bugs.reduceStock(8);
+        assertEquals(0, bugs.getStock());
+        assertEquals(13, grid.getTotalConsumption());
     }
 }

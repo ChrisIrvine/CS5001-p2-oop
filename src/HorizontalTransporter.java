@@ -8,6 +8,7 @@ public class HorizontalTransporter extends AbstractItem{
         this.yCoordinate = y;
         this.capacity = cap;
         this.grid.registerItem(x, y, this);
+
     }
 
     @Override
@@ -16,8 +17,10 @@ public class HorizontalTransporter extends AbstractItem{
         if(foundFarm >= 0) {
             int foundDest = this.destinationCheck();
             if(foundDest >= 0) {
-                this.transportGoods(foundFarm, foundDest,
-                        this.stockCheck(foundFarm));
+                if(positionCheck(foundFarm, foundDest)) {
+                    this.transportGoods(foundFarm, foundDest,
+                            this.stockCheck(foundFarm));
+                }
             }
         }
     }
@@ -28,8 +31,14 @@ public class HorizontalTransporter extends AbstractItem{
 
     }
 
-    private int stockCheck(int y) {
-        int tempStock = this.grid.getStockAt(this.xCoordinate, y);
+    private boolean positionCheck(int farmPos, int conPos) {
+        if(farmPos < this.yCoordinate && this.yCoordinate < conPos) {
+            return true;
+        } else return conPos < this.yCoordinate && this.yCoordinate < farmPos;
+    }
+
+    private int stockCheck(int x) {
+        int tempStock = this.grid.getStockAt(x, this.yCoordinate);
 
         if((tempStock - this.capacity) < 0 && tempStock > 0) {
             return tempStock;
@@ -41,7 +50,7 @@ public class HorizontalTransporter extends AbstractItem{
     private int farmCheck() {
         for(int i = 0; i < this.grid.getWidth(); i++) {
             if(this.grid.getItem(xCoordinate, i) instanceof CornFarmer ||
-                this.grid.getItem(xCoordinate, i) instanceof RadishFarmer) {
+                    this.grid.getItem(xCoordinate, i) instanceof RadishFarmer) {
                 if(this.grid.getItem(xCoordinate, i).getStock() > 0) {
                     return i;
                 }
@@ -94,7 +103,5 @@ public class HorizontalTransporter extends AbstractItem{
     }
 
     @Override
-    public String toString() {
-        return ("HT");
-    }
+    public String toString() { return ("HT"); }
 }

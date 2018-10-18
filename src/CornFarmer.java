@@ -65,30 +65,6 @@ public class CornFarmer extends AbstractItem {
                         }
                     }
                 }
-
-// if ((this.xCoordinate + this.deny[i]) < 0 ||
-//                        (this.xCoordinate + this.deny[i]) > grid.getHeight() ||
-//                        (this.yCoordinate + this.deny[i]) < 0 ||
-//                        (this.yCoordinate + this.deny[i]) > grid.getWidth()) {
-//                    for (int j = 0; j < this.deny[i]; j++) {
-//                        if (i % 2 == 0 && (grid.getItem(this.xCoordinate +
-//                            this.deny[i], this.yCoordinate) instanceof CornFarmer ||
-//                            grid.getItem(this.xCoordinate + this.deny[i],
-//                                    this.yCoordinate) instanceof RadishFarmer)) {
-//                        goodToProduce = false;
-//                        return;
-//                        } else if (i % 2 != 0 && (grid.getItem(this.xCoordinate,
-//                            this.yCoordinate + this.deny[i]) instanceof
-//                            CornFarmer || grid.getItem(this.xCoordinate,
-//                            this.yCoordinate + this.deny[i]) instanceof RadishFarmer)) {
-//                        goodToProduce = false;
-//                        return;
-//                        } else {
-//                        goodToProduce = true;
-//                    }
-//                }
-            
-
             }
             if (!foundFarmer) {
                 int production = this.PRODUCEVALUE * this.PRODUCTION;

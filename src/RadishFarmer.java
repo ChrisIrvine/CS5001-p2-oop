@@ -1,6 +1,5 @@
 public class RadishFarmer extends AbstractItem{
-    private int[] deny = {1, 1, 1, 1};
-    private int stock = 0;
+    private int[] deny = {-1, -1, 1, 1};
     private final int PRODUCEVALUE = 1;
     private final int PRODUCTION = 10;
 
@@ -8,71 +7,67 @@ public class RadishFarmer extends AbstractItem{
         this.grid = grid;
         this.xCoordinate = x;
         this.yCoordinate = y;
-        grid.registerItem(x, y, this);
+        this.grid.registerItem(x, y, this);
     }
 
     @Override
     protected int getStock() {
-        return this.stock;
+        return this.grid.getStockAt(xCoordinate, yCoordinate);
     }
 
-    void setStock(int stock) {
-        this.stock = stock;
+    int getPRODUCEVALUE() {
+        return this.PRODUCEVALUE;
+    }
+
+    int getPRODUCTION() {
+        return this.PRODUCTION;
     }
 
     @Override
     protected void addToStock(int nutrition) {
-        if(nutrition > 0) { this.stock += nutrition; }
+        if(nutrition < 0) {
+            this.addToStock(Math.abs(nutrition));
+        } else if(nutrition > 0) {
+            this.grid.stock[xCoordinate][yCoordinate] += nutrition;
+        }
     }
 
     @Override
     protected void reduceStock(int nutrition) {
-        if (nutrition < 0) {
-            nutrition = Math.abs(nutrition);
-        }
-
-        if (this.stock - nutrition < 0) {
-            this.setStock(0);
+        if(nutrition < 0) {
+            this.addToStock(Math.abs(nutrition));
+        } else if((this.getStock() - nutrition) <= 0) {
+            this.grid.emptyStockAt(xCoordinate, yCoordinate);
         } else {
-            this.stock -= nutrition;
+            this.grid.stock[xCoordinate][yCoordinate] = this.getStock() - nutrition;
         }
     }
-
-    int getProduceValue() {
-        return this.PRODUCEVALUE;
-    }
-
-    public int getProduction() { return this.PRODUCTION; }
 
     @Override
     public void process(TimeStep timeStep) {
         int delay = 3;
-        boolean goodToProduce = false;
+        boolean foundFarmer = false;
         if(timeStep.getValue() % delay == 0) {
             for (int i = 0; i < this.deny.length; i++) {
-                if ((this.xCoordinate + this.deny[i]) < 0
-                        || (this.xCoordinate + this.deny[i])
-                        > grid.getHeight()
-                        || (this.yCoordinate + this.deny[i])
-                        < 0
-                        || (this.yCoordinate + this.deny[i])
-                        > grid.getWidth()) {
-                } else if (i % 2 == 0 && grid.getItem(this.xCoordinate +
-                        this.deny[i], this.yCoordinate) instanceof CornFarmer) {
-                    goodToProduce = false;
-                    return;
-                } else if (i % 2 != 0 && grid.getItem(this.xCoordinate,
-                        this.yCoordinate + this.deny[i]) instanceof
-                        CornFarmer) {
-                    goodToProduce = false;
-                    return;
-                } else {
-                    goodToProduce = true;
+                if(i % 2 == 0) { //must refer to height
+                    if(this.yCoordinate + deny[i] >= 0 && this.yCoordinate + deny[i] < this.grid.getWidth()) {
+                        if(this.grid.getItem(xCoordinate, (yCoordinate + deny[i])) instanceof CornFarmer ||
+                                this.grid.getItem(xCoordinate, (yCoordinate + deny[i])) instanceof RadishFarmer ) {
+                            foundFarmer = true;
+                        }
+                    }
+                } else if (i % 2 != 0) {
+                    if(this.xCoordinate + deny[i] >= 0 && this.xCoordinate + deny[i] < this.grid.getWidth()) {
+                        if(this.grid.getItem((xCoordinate + deny[i]), yCoordinate) instanceof CornFarmer ||
+                                this.grid.getItem((xCoordinate + deny[i]), yCoordinate) instanceof RadishFarmer ) {
+                            foundFarmer = true;
+                        }
+                    }
                 }
             }
-            if (goodToProduce) {
+            if (!foundFarmer) {
                 int production = this.PRODUCEVALUE * this.PRODUCTION;
-                addToStock(production);
+                this.grid.addToStockAt(this.xCoordinate, this.yCoordinate, production);
                 grid.recordProduction(production);
             }
         }
@@ -80,6 +75,6 @@ public class RadishFarmer extends AbstractItem{
 
     @Override
     public String toString() {
-        return ("  Radish(" + this.getStock() + ")   ");
+        return ("Radish(" + this.getStock() + ")");
     }
 }
