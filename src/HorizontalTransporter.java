@@ -15,10 +15,9 @@ public class HorizontalTransporter extends AbstractItem{
         for(int i = 0; i < this.grid.getWidth(); i++) {
             farmResults[i] = -1;
         }
-        for(int i = 0; i < this.grid.getHeight(); i++) {
+        for(int i = 0; i < this.grid.getWidth(); i++) {
             consumerResults[i] = -1;
         }
-
     }
 
     @Override

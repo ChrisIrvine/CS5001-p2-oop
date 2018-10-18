@@ -14,10 +14,10 @@ public class GridTest {
     @Before
     public void setUp() {
         ts = new TimeStep();
-        grid = new Grid(1, 3);
+        grid = new Grid(3, 1);
         new CornFarmer(grid, 0, 0);
-        new Beaver(grid, 0, 2);
-        new HorizontalTransporter(grid, 0, 1, 10);
+        new Beaver(grid, 2, 0);
+        new VerticalTransporter(grid, 1, 0, 10);
 
     }
 
