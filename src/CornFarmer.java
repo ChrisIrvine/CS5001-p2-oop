@@ -40,7 +40,6 @@ public class CornFarmer extends AbstractItem {
         } else if((this.getStock() - nutrition) <= 0) {
             this.grid.emptyStockAt(xCoordinate, yCoordinate);
         } else {
-            System.out.println(this.getStock() - nutrition);
             this.grid.stock[xCoordinate][yCoordinate] = this.getStock() - nutrition;
         }
     }
