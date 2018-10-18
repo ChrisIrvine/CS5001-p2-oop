@@ -36,16 +36,6 @@ public class HorizontalTransporter extends AbstractItem{
                 }
             }
         }
-
-//        if() {
-//            int foundDest = this.destinationCheck();
-//            if(foundDest >= 0) {
-//                if(positionCheck(foundFarm, foundDest)) {
-//                    this.transportGoods(foundFarm, foundDest,
-//                            this.stockCheck(foundFarm));
-//                }
-//            }
-//        }
     }
 
     private void transportGoods(int start, int finish, int nutrition) {
@@ -98,15 +88,6 @@ public class HorizontalTransporter extends AbstractItem{
                 }
             }
         }
-
-
-//        for(int i = 0; i < this.grid.getWidth(); i++) {
-//            if(this.grid.getItem(xCoordinate, i) instanceof Rabbit ||
-//                    this.grid.getItem(xCoordinate, i) instanceof Beaver) {
-//                return i;
-//            }
-//        }
-//        return -1;
     }
 
     @Override

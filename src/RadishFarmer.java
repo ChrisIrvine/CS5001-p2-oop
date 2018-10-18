@@ -49,14 +49,14 @@ public class RadishFarmer extends AbstractItem{
         boolean foundFarmer = false;
         if(timeStep.getValue() % delay == 0) {
             for (int i = 0; i < this.deny.length; i++) {
-                if(i % 2 == 0) { //must refer to height
+                if(i % 2 == 0) { //deny[i] must refer to height
                     if(this.yCoordinate + deny[i] >= 0 && this.yCoordinate + deny[i] < this.grid.getWidth()) {
                         if(this.grid.getItem(xCoordinate, (yCoordinate + deny[i])) instanceof CornFarmer ||
                                 this.grid.getItem(xCoordinate, (yCoordinate + deny[i])) instanceof RadishFarmer ) {
                             foundFarmer = true;
                         }
                     }
-                } else if (i % 2 != 0) {
+                } else if (i % 2 != 0) { //deny[i] must refer to width
                     if(this.xCoordinate + deny[i] >= 0 && this.xCoordinate + deny[i] < this.grid.getWidth()) {
                         if(this.grid.getItem((xCoordinate + deny[i]), yCoordinate) instanceof CornFarmer ||
                                 this.grid.getItem((xCoordinate + deny[i]), yCoordinate) instanceof RadishFarmer ) {

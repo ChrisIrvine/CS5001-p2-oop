@@ -36,17 +36,6 @@ public class VerticalTransporter extends AbstractItem {
                 }
             }
         }
-
-//        int foundFarm = this.farmCheck();
-//        if(foundFarm >= 0) {
-//            int foundDest = this.destinationCheck();
-//            if(foundDest >= 0) {
-//                if(positionCheck(foundFarm, foundDest)) {
-//                    this.transportGoods(foundFarm, foundDest,
-//                            this.stockCheck(foundFarm));
-//                }
-//            }
-//        }
     }
 
     private void transportGoods(int start, int finish, int nutrition) {
@@ -74,18 +63,6 @@ public class VerticalTransporter extends AbstractItem {
         }
     }
 
-//    private int farmCheck() {
-//        for(int i = 0; i < this.grid.getHeight(); i++) {
-//            if(this.grid.getItem(i, yCoordinate) instanceof CornFarmer ||
-//                    this.grid.getItem(i, yCoordinate) instanceof RadishFarmer) {
-//                if(this.grid.getItem(i, yCoordinate).getStock() > 0) {
-//                    return i;
-//                }
-//            }
-//        }
-//        return -1;
-//    }
-
     private void farmCheck() {
         for(int i = 0; i < this.grid.getHeight(); i++) {
             if(this.grid.getItem(i, yCoordinate) instanceof CornFarmer ||
@@ -96,16 +73,6 @@ public class VerticalTransporter extends AbstractItem {
             }
         }
     }
-
-//    private int destinationCheck() {
-//        for(int i = 0; i < this.grid.getHeight(); i++) {
-//            if(this.grid.getItem(i, yCoordinate) instanceof Rabbit ||
-//                    this.grid.getItem(i, yCoordinate) instanceof Beaver) {
-//                return i;
-//            }
-//        }
-//        return -1;
-//    }
 
     private void destinationCheck(int farmPos) {
         if (farmPos > this.xCoordinate) {
