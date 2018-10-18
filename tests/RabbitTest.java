@@ -4,9 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class RabbitTest {
-    Rabbit bugs;
-    Grid grid;
-    TimeStep ts;
+    private Rabbit bugs;
+    private Grid grid;
+    private TimeStep ts;
 
     @Before
     public void setUp() {
@@ -22,7 +22,6 @@ public class RabbitTest {
         assertEquals(0, bugs.getStock());
         assertEquals(8, grid.getTotalConsumption());
     }
-
 
     @Test
     public void getStock() {
@@ -48,7 +47,7 @@ public class RabbitTest {
         assertEquals(8, grid.getTotalConsumption());
         bugs.addToStock(5);
         assertEquals(5, bugs.getStock());
-        bugs.reduceStock(8);
+        bugs.reduceStock(-8);
         assertEquals(0, bugs.getStock());
         assertEquals(13, grid.getTotalConsumption());
     }

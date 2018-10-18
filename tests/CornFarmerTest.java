@@ -4,13 +4,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CornFarmerTest {
-    CornFarmer corn;
-    TimeStep tS;
-    Grid grid;
+    private CornFarmer corn;
+    private TimeStep tS;
 
     @Before
     public void setUp() {
-        grid = new Grid(3, 5);
+        Grid grid = new Grid(3, 5);
         corn = new CornFarmer(grid, 1, 1);
         tS = new TimeStep();
     }
@@ -31,7 +30,7 @@ public class CornFarmerTest {
         corn.addToStock(4);
         assertEquals(4, corn.getStock());
         corn.addToStock(-5);
-        assertEquals(4, corn.getStock());
+        assertEquals(9, corn.getStock());
     }
 
     @Test
