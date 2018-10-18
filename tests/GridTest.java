@@ -58,9 +58,9 @@ public class GridTest {
     @org.junit.Test
     public void processItems() {
         Game game = new Game(grid);
-        game.run(50);
-        assertEquals(300, grid.getTotalProduction());
-        assertEquals(235, grid.getTotalConsumption());
+        game.run(6);
+        assertEquals(25, grid.getTotalProduction());
+        assertEquals(15, grid.getTotalConsumption());
     }
 
     @org.junit.Test

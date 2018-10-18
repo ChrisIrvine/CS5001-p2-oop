@@ -28,7 +28,6 @@ public class HorizontalTransporter extends AbstractItem{
     private void transportGoods(int start, int finish, int nutrition) {
         this.grid.reduceStockAt(xCoordinate, start, nutrition);
         this.grid.addToStockAt(xCoordinate, finish, nutrition);
-
     }
 
     private boolean positionCheck(int farmPos, int conPos) {
@@ -37,8 +36,8 @@ public class HorizontalTransporter extends AbstractItem{
         } else return conPos < this.yCoordinate && this.yCoordinate < farmPos;
     }
 
-    private int stockCheck(int x) {
-        int tempStock = this.grid.getStockAt(x, this.yCoordinate);
+    private int stockCheck(int y) {
+        int tempStock = this.grid.getStockAt(xCoordinate, y);
 
         if((tempStock - this.capacity) < 0 && tempStock > 0) {
             return tempStock;
@@ -103,5 +102,5 @@ public class HorizontalTransporter extends AbstractItem{
     }
 
     @Override
-    public String toString() { return ("HT"); }
+    public String toString() { return ("      HT      "); }
 }
