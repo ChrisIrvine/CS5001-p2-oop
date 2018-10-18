@@ -16,7 +16,7 @@ public class RadishFarmer extends AbstractItem{
     /**
      * Constructor method for RadishFarmer. Uses attributes inherited from
      * AbstractItem to hold the grid, x and yCoordinates for this object.
-     * Once attributes are assigned, the RadishFamer is registered into the
+     * Once attributes are assigned, the RadishFarmer is registered into the
      * grid.
      * @param grid - Matrix where the RadishFarmer 'lives'
      * @param x - height coordinate
@@ -91,14 +91,13 @@ public class RadishFarmer extends AbstractItem{
      * Method that will produce stock according to the class PRODUCTION *
      * PRODUCEVALUE, if the current time step is a multiple of 3, and there are
      * no other farmer objects within the deny area (class attribute deny[]).
-     * @param timeStep The current time-step
+     * @param timeStep - current time-step
      */
     @Override
     public void process(TimeStep timeStep) {
-        int delay = 3;
         boolean foundFarmer = false;
         //Check that this time step is a multiple of 3
-        if(timeStep.getValue() % delay == 0) {
+        if(timeStep.getValue() % 3 == 0) {
             for (int i = 0; i < this.deny.length; i++) {
                 if(i % 2 == 0) { //deny[i] must refer to height
                     //Bounds checking
