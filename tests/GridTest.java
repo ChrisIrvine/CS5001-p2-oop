@@ -1,8 +1,25 @@
+import org.junit.Before;
+
 import static org.junit.Assert.*;
 
-public class BasicGridTest {
-    BasicGrid grid = new BasicGrid(3, 5);
-    Farmer tim = new Farmer(Farmer.FarmerType.CornFarmer);
+public class GridTest {
+    Grid grid;
+//    CornFarmer tim;
+//    RadishFarmer rad;
+//    HorizontalTransporter hz;
+//    Beaver beaver;
+//    //Rabbit bugs;
+    TimeStep ts;
+
+    @Before
+    public void setUp() {
+        ts = new TimeStep();
+        grid = new Grid(3, 1);
+        new CornFarmer(grid, 0, 0);
+        new Beaver(grid, 2, 0);
+        new VerticalTransporter(grid, 1, 0, 10);
+
+    }
 
     @org.junit.Test
     public void getWidth() {
@@ -11,18 +28,11 @@ public class BasicGridTest {
 
     @org.junit.Test
     public void getHeight() {
-        assertEquals(5, grid.getHeight());
-    }
-
-    @org.junit.Test
-    public void registerItem() {
-        grid.registerItem(1,1, tim);
-        assertEquals(tim, grid.getItem(1, 1));
+        assertEquals(1, grid.getHeight());
     }
 
     @org.junit.Test
     public void getItem() {
-        assertTrue(grid.getItem(1, 1) instanceof EmptyItem);
     }
 
     @org.junit.Test
@@ -47,6 +57,10 @@ public class BasicGridTest {
 
     @org.junit.Test
     public void processItems() {
+        Game game = new Game(grid);
+        game.run(50);
+        assertEquals(300, grid.getTotalProduction());
+        assertEquals(235, grid.getTotalConsumption());
     }
 
     @org.junit.Test
